@@ -2,15 +2,21 @@
 #include <string.h>
 
 bool isAnagram(char* str1, char* str2) {
-    if (strlen(str1) != strlen(str2)) return false;
+    if (strlen(str1) != strlen(str2)) 
+        return false;
     int count[256] = {0};
-    for (int i = 0; str1[i] && str2[i]; i++) {
+    
+    for (int i = 0; str1[i] && str2[i]; i++) 
+    {
         count[str1[i]]++;
         count[str2[i]]--;
     }
-    for (int i = 0; i < 256; i++) {
-        if (count[i] != 0) return false;
+    for (int i = 0; i < 256; i++) 
+    {
+        if (count[i] != 0) 
+            return false;
     }
+    
     return true;
 }
 void main()
@@ -18,7 +24,7 @@ void main()
     char ex1[] = "irak";
     char ex2[] = "arik";
 
-    char ex3[] = "baba";
+    char ex3[] = "bast";
     char ex4[] = "kale";
 
 
